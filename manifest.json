@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Medical Billing Assistant",
+  "version": "1.0",
+  "description": "Secure medical billing data entry",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://*.officeally.com/*",
+    "file://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": [
+      "*://*.officeally.com/*",
+      "file://*/*"
+    ],
+    "js": ["content.js"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
