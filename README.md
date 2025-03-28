@@ -62,19 +62,6 @@ swiftbills/
 - NDC Code: 11 digits
 - CPT/HCPCS: 5 digits
 
-## Security Considerations
-
-- All stored data is encrypted using the WebCrypto API
-- No external network requests
-- Input sanitization for all form fields
-- Strict Content Security Policy
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
-
 ## License
 
 MIT License
